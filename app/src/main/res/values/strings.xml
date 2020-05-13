@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">ERekhaNew</string>
+    <string name="md5_info">6e486e536d31d37e268de00fc8b307a3</string>
+    <string name="preference_file">my_preference_file</string>
+    <string name="prefe_user_id">pref_user_id</string>
+    <string name="pref_user_mobile">pref_user_mobile</string>
+    <string name="pref_user_otp" />
+    <string name="pref_user_id">pref_user_id</string>
+    <string name="pref_is_valid_otp">pref_is_valid_otp</string>
+    <string name="pref_user_login_name">pref_user_login_name</string>
+    <string name="pref_user_login_password">pref_user_login_password</string>
+    <string name="pref_user_name">pref user name</string>
+    <string name="pref_user_nearest_police_station">pref_user_nearest_police_station</string>
+    <string name="pref_is_login">pref_is_login</string>
+    <string name="hintemail">Username</string>
+    <string name="hintpassword">Password</string>
+    <string name="have_account_text">Don\'t have an account?</string>
+    <string name="sign_up">Register</string>
+    <string name="sign_in">Login</string>
+    <string name="otp_description">We have sent a 6 digit verification code to your mobile number +91 \"+appConfig.getUserMobileNumber()+\". Enter it below.</string>
+    <string name="enter_o_t_p">Enter OTP</string>
+    <string name="default_error">Something went wrong. Please try again later !!</string>
+    <string name="server_error">Unable to reach server. Please try again later !!</string>
+    <string name="no_network">No network connection. Please try again later</string>
+</resources>

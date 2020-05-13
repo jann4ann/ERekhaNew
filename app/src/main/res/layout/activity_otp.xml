@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ValidateOTPActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <include layout="@layout/toolbar_layout"
+            android:id="@+id/otp_appbar_container"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/otp_description"
+                    android:gravity="center"
+                    android:id="@+id/txtOtpDesc"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:textSize="18sp"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:hint="@string/enter_o_t_p"
+                    android:background="@drawable/rounded_button_white"
+                    android:inputType="number"
+                    android:id="@+id/txtOtp"/>
+
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Verify"
+                    android:layout_gravity="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorDarkAsh"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/roundedborderl"
+                    android:id="@+id/btnValidateOtp"
+                    android:enabled="false"
+                    />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="RESEND OTP"
+                    android:id="@+id/btnResendOtp"
+                    android:background="@null"
+                    android:layout_marginTop="45dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    />
+
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>
