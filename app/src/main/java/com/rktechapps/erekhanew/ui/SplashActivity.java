@@ -1,4 +1,4 @@
-package com.rktechapps.erekhanew;
+package com.rktechapps.erekhanew.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.rktechapps.erekhanew.R;
 import com.rktechapps.erekhanew.apputil.AppConfig;
 
 public class SplashActivity extends AppCompatActivity {
@@ -28,9 +29,9 @@ public class SplashActivity extends AppCompatActivity {
     private void validateLogin()
     {
         if(appConfig.checkLoginStatus())
-            startActivity(new Intent(this,SponsorHomeActivity.class));
+            startActivity(new Intent(this, DashboardActivity.class));
         else
-            startActivity(new Intent(this,LoginActivity.class));
+            startActivity(new Intent(this, LoginActivity.class));
         finish();
     }
 }

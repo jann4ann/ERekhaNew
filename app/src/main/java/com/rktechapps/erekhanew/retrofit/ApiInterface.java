@@ -4,6 +4,8 @@ import com.rktechapps.erekhanew.models.DashboardRequestBody;
 import com.rktechapps.erekhanew.models.DashboardResponse;
 import com.rktechapps.erekhanew.models.FetchPoliceStationRequestBody;
 import com.rktechapps.erekhanew.models.FetchPoliceStationResponse;
+import com.rktechapps.erekhanew.models.HelpDeskRequestBody;
+import com.rktechapps.erekhanew.models.HelpDeskResponse;
 import com.rktechapps.erekhanew.models.LoginPoliceBody;
 import com.rktechapps.erekhanew.models.LoginPoliceResponse;
 import com.rktechapps.erekhanew.models.ResendOtpRequestBody;
@@ -35,4 +37,7 @@ public interface ApiInterface {
 
     @POST("PoliceDashBoard")
     Call<DashboardResponse> getDashboardData(@Body DashboardRequestBody requestBody);
+
+    @POST("HelpDesk")
+    Call<HelpDeskResponse> fetchHelpNumber(@Body HelpDeskRequestBody requestBody);
 }

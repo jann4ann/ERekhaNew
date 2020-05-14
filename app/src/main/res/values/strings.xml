@@ -22,4 +22,11 @@
     <string name="default_error">Something went wrong. Please try again later !!</string>
     <string name="server_error">Unable to reach server. Please try again later !!</string>
     <string name="no_network">No network connection. Please try again later</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="user_id_key">user_id</string>
+    <string name="pref_user_district">pref_user_dist</string>
+    <string name="support_desc">Please call these numbers for instant activation or support.</string>
+    <string name="allow_call_permission"><![CDATA[To make this phone call, allow eRekha access to your call settings. Tap Settings > Apps > e-Rekha > Permissions and turn Telephone on.]]></string>
 </resources>

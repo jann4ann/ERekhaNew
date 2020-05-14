@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterPoliceActivity">
+    tools:context=".ui.RegisterPoliceActivity">
 
 
     <LinearLayout
@@ -26,8 +26,8 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
                     android:src="@drawable/splash"
                     android:layout_gravity="center">
                 </ImageView>
@@ -213,7 +213,7 @@
                     android:layout_marginRight="20dp"
                     android:drawablePadding="10dp">
 
-                    <com.rktechapps.erekhanew.DelayAutoCompleteTextView
+                    <com.rktechapps.erekhanew.commonutils.DelayAutoCompleteTextView
                         android:id="@+id/atvPoliceStation"
                         android:background="@drawable/rounded_button_white"
                         android:textSize="18dp"

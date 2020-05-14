@@ -2,8 +2,12 @@ package com.rktechapps.erekhanew.apputil;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Build;
+
+import androidx.core.app.ActivityCompat;
 
 import com.rktechapps.erekhanew.R;
 
@@ -83,11 +87,26 @@ public class AppConfig {
         editor.apply();
     }
 
+    public void setUserId(String userId){
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(context.getString(R.string.prefe_user_id),userId);
+        editor.apply();
+    }
 
     public void updateLoginStatus(boolean status)
     {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putBoolean(context.getString(R.string.pref_is_login),status);
+        editor.apply();
+    }
+    public void updateLoginInfo(String userid, String name, String mobile,String policeStation, String district){
+
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(context.getString(R.string.prefe_user_id),userid);
+        editor.putString(context.getString(R.string.pref_user_mobile),mobile);
+        editor.putString(context.getString(R.string.pref_user_name),name);
+        editor.putString(context.getString(R.string.pref_user_nearest_police_station),policeStation);
+        editor.putString(context.getString(R.string.pref_user_district),district);
         editor.apply();
     }
 
@@ -100,5 +119,21 @@ public class AppConfig {
     {
         return  sharedPreferences.getString(context.getString(R.string.pref_user_nearest_police_station),"");
     }
+    public Boolean shouldAskPermission(Context context, String permission){
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+            if(ActivityCompat.checkSelfPermission(context,permission) != PackageManager.PERMISSION_GRANTED)
+                return true;
+        }
+        return false;
+    }
+
+    public void firstTimeAskingPermission(String permission, Boolean isFirstTime){
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean(permission,isFirstTime).apply();
+    }
+     public boolean isFirstTimeAskingPermission(String permission){
+        return sharedPreferences.getBoolean(permission,true);
+     }
+
 
 }

@@ -1,4 +1,4 @@
-package com.rktechapps.erekhanew;
+package com.rktechapps.erekhanew.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.gson.Gson;
+import com.rktechapps.erekhanew.R;
 import com.rktechapps.erekhanew.apputil.AppConfig;
 import com.rktechapps.erekhanew.models.ResendOtpRequestBody;
 import com.rktechapps.erekhanew.models.ResendOtpResponse;
@@ -149,7 +149,7 @@ public class ValidateOTPActivity extends AppCompatActivity implements View.OnCli
                     Toast.makeText(ValidateOTPActivity.this,
                             "Verification is complete..Now you can login with the new credentials",
                             Toast.LENGTH_LONG).show();
-                    startActivity(new Intent(ValidateOTPActivity.this,LoginActivity.class));
+                    startActivity(new Intent(ValidateOTPActivity.this, LoginActivity.class));
                     finish();
                 }
                 else

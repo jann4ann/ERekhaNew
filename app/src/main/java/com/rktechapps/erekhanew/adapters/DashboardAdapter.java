@@ -15,25 +15,38 @@ import com.rktechapps.erekhanew.models.DashboardModel;
 import java.util.List;
 
 public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.ViewHolder> {
+
+    public interface dashboardItemClickListener{
+        public void onDashboardItemClicked(DashboardModel item);
+    }
+
+    private dashboardItemClickListener mListener;
+
+    public void setDashboardItemClickListener(dashboardItemClickListener listener){
+        this.mListener = listener;
+    }
+
     List<DashboardModel> list;
     Context context;
     public DashboardAdapter(Context context, List<DashboardModel> values) {
-
         list = values;
         this.context = context;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         public TextView txtCount, txtLabel;
 
         public ViewHolder(View v) {
-
             super(v);
             txtCount = (TextView) v.findViewById(R.id.txtCountDashboard);
             txtLabel = (TextView) v.findViewById(R.id.txtLabelDashboard);
         }
 
+        @Override
+        public void onClick(View v) {
+            //mListener.onDashboardItemClicked(txtCount,txtLabel);
+        }
     }
 
     @Override

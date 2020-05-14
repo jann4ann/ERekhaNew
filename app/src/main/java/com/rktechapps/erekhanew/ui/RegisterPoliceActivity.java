@@ -1,4 +1,4 @@
-package com.rktechapps.erekhanew;
+package com.rktechapps.erekhanew.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,7 +12,6 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -21,6 +20,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.rktechapps.erekhanew.commonutils.DelayAutoCompleteTextView;
+import com.rktechapps.erekhanew.R;
 import com.rktechapps.erekhanew.apputil.AppConfig;
 import com.rktechapps.erekhanew.models.FetchPoliceStationRequestBody;
 import com.rktechapps.erekhanew.models.FetchPoliceStationResponse;
@@ -29,12 +30,9 @@ import com.rktechapps.erekhanew.models.RegisterPoliceResponse;
 import com.rktechapps.erekhanew.retrofit.ApiClient;
 import com.rktechapps.erekhanew.retrofit.ApiInterface;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import okhttp3.RequestBody;
-import okio.Buffer;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -211,7 +209,7 @@ public class RegisterPoliceActivity extends AppCompatActivity implements View.On
                 register();
                 break;
             case R.id.imageBackArrow:
-                startActivity(new Intent(RegisterPoliceActivity.this,LoginActivity.class));
+                startActivity(new Intent(RegisterPoliceActivity.this, LoginActivity.class));
                 finish();
                 break;
         }

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    android:orientation="vertical"
+    tools:context=".ui.LoginActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -15,37 +16,37 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <include layout="@layout/toolbar_layout"/>
+
+            <include layout="@layout/toolbar_layout" />
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="80dp">
+                android:layout_marginTop="80dp"
+                android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="150dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/splash"
-                    android:layout_gravity="center">
-                </ImageView>
+                    android:layout_gravity="center"
+                    android:src="@drawable/splash"></ImageView>
 
 
                 <EditText
                     android:id="@+id/txtUsername"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/hintemail"
-                    android:textColorHint="@color/colorDarkAsh"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
                     android:layout_marginTop="20dp"
-                    android:textColor="@color/colorBlack"
-                    app:backgroundTint="@color/colorPrimary"
-                    android:maxLines="1"
+                    android:layout_marginRight="20dp"
+                    android:hint="@string/hintemail"
+                    android:inputType="text"
                     android:maxLength="40"
-                    android:inputType="text">
+                    android:maxLines="1"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorDarkAsh"
+                    app:backgroundTint="@color/colorPrimary">
 
                 </EditText>
 
@@ -54,64 +55,97 @@
                     android:id="@+id/txtPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/hintpassword"
-                    android:textColorHint="@color/colorDarkAsh"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
                     android:layout_marginTop="30dp"
+                    android:layout_marginRight="20dp"
                     android:layout_marginBottom="20dp"
-                    android:textColor="@color/colorBlack"
-                    app:backgroundTint="@color/colorPrimary"
-                    android:maxLines="1"
+                    android:hint="@string/hintpassword"
+                    android:inputType="textPassword"
                     android:maxLength="20"
-                    android:inputType="textPassword">
+                    android:maxLines="1"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorDarkAsh"
+                    app:backgroundTint="@color/colorPrimary">
 
                 </EditText>
+
                 <Button
                     android:id="@+id/btnLogin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
                     android:background="@drawable/roundbutton"
                     android:text="@string/sign_in"
-                    android:textColor="@color/colorWhite"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:layout_marginRight="20dp">
+                    android:textColor="@color/colorWhite">
 
                 </Button>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="2"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="20dp">
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.7"
-                    android:textAlignment="textEnd"
-                    android:text="@string/have_account_text"
-                    android:textColor="@color/colorDarkAsh"
-                    android:gravity="end">
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
 
-                </TextView>
-                <TextView
-                    android:clickable="true"
-                    android:id="@+id/textRegister"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1.3"
-                    android:text="@string/sign_up"
-                    android:textStyle="bold"
-                    android:paddingLeft="5dp"
-                    android:textColor="@color/colorDarkAsh">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:gravity="end"
+                        android:text="@string/have_account_text"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/colorDarkAsh">
 
-                </TextView>
-            </LinearLayout>
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/textRegister"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.3"
+                        android:clickable="true"
+                        android:paddingLeft="5dp"
+                        android:text="@string/sign_up"
+                        android:textColor="@color/colorDarkAsh"
+                        android:textStyle="bold">
+
+                    </TextView>
+                </LinearLayout>
+
+
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
+    <RelativeLayout
+        android:id="@+id/layHelpDeskDetails"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|bottom"
+        android:padding="5dp">
+        <TextView
+            android:id="@+id/pleaseCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please call ">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/txtHelpNumber"
+            android:layout_height="wrap_content"
+            android:text="7012508090"
+            android:textColor="@android:color/holo_blue_dark"
+            android:layout_toRightOf="@id/pleaseCall">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" for instant support"
+            android:layout_toRightOf="@id/txtHelpNumber">
+        </TextView>
+    </RelativeLayout>
 </LinearLayout>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterPoliceActivity">
+    tools:context=".ui.SupportActivity">
 
 
     <LinearLayout
@@ -26,33 +26,37 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
                     android:src="@drawable/splash"
                     android:layout_gravity="center">
                 </ImageView>
 
                 <TextView
-                    android:id="@+id/txtWelcomeUser"
+                    android:id="@+id/lblSupport"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginRight="20dp"
-                    android:text="Welcome User !!"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="20sp" />
+                    android:layout_marginBottom="8dp"
+                    android:textStyle="bold"
+                    android:text="@string/support_desc"
+                    android:textSize="16sp" />
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/dashboardRecyclerView"
+                    android:id="@+id/supportRecyclerView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:paddingTop="5dp"
                     android:nestedScrollingEnabled="false">
                 </androidx.recyclerview.widget.RecyclerView>
+
             </LinearLayout>
+
         </ScrollView>
+
+
+
     </LinearLayout>
-
-
 </LinearLayout>
