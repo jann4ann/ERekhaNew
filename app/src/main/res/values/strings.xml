@@ -29,4 +29,5 @@
     <string name="pref_user_district">pref_user_dist</string>
     <string name="support_desc">Please call these numbers for instant activation or support.</string>
     <string name="allow_call_permission"><![CDATA[To make this phone call, allow eRekha access to your call settings. Tap Settings > Apps > e-Rekha > Permissions and turn Telephone on.]]></string>
+    <string name="particulars_flag">flag</string>
 </resources>

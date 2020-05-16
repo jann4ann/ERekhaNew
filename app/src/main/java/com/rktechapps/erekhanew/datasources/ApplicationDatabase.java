@@ -1,23 +1,25 @@
 package com.rktechapps.erekhanew.datasources;
 
+import android.content.Context;
+import android.os.AsyncTask;
+
+import androidx.annotation.NonNull;
 import androidx.room.Database;
+import androidx.room.Room;
+import androidx.room.RoomDatabase;
+import androidx.sqlite.db.SupportSQLiteDatabase;
+
+import java.util.concurrent.Executors;
 
 
-
-
-
-    @Database(entities = {},
-            version = 1)
+@Database(entities = {Countries.class,States.class,Districts.class},
+            version = 3)
     public abstract class ApplicationDatabase extends RoomDatabase {
 
         private static ApplicationDatabase instance;
-
-        public abstract MeasurementsDAO measurementDAO();
-        public abstract ReadingsDAO readingsDAO();
-        public abstract AppointmentsDAO appointmentsDAO();
-        public  abstract MedicineTimesDAO medicineTimesDAO();
-        public abstract MedicineDetailsDAO medicineDetailsDAO();
-        public abstract ReminderDetailsDAO reminderDetailsDAO();
+        public abstract CountriesDAO countriesDAO();
+        public abstract StatesDAO statesDAO();
+        public abstract DistrictsDAO districtsDAO();
 
         public synchronized static ApplicationDatabase getInstance(Context context) {
             if (instance == null) {
@@ -29,22 +31,27 @@ import androidx.room.Database;
         private static ApplicationDatabase buildDatabase(final Context context) {
             return Room.databaseBuilder(context,
                     ApplicationDatabase.class,
-                    "myNewDatabase")
+                    "eRekhaSettingsDb")
                     .fallbackToDestructiveMigration()
-                    .addCallback(new Callback() {
+                    /*.addCallback(new Callback() {
                         @Override
-                        public void onCreate(@NonNull SupportSQLiteDatabase db) {
-                            super.onCreate(db);
-                            Executors.newSingleThreadScheduledExecutor().execute(new Runnable() {
-                                @Override
-                                public void run() {
-                                    getInstance(context).measurementDAO().insertAll(Measurements.populateData());
-                                }
-                            });
+                        public void onOpen (@NonNull SupportSQLiteDatabase db){
+                            super.onOpen(db);
+                            new PopulateDbAsync(instance).execute();
                         }
-                    })
+
+                    })*/
                     .build();
         }
-    }
+
+
+
+}
+
+
+
+
+
+
 
 

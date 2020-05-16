@@ -5,8 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.SettingsActivity">
+    tools:context=".ui.settings.SettingsActivity">
 
+    <include layout="@layout/toolbar_layout"></include>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -17,6 +18,7 @@
             android:orientation="vertical"
             android:padding="10dp"
             >
+
 
             <ImageView
                 android:layout_width="100dp"
@@ -93,13 +95,15 @@
 
                     />
                 <TextView
-                    android:id="@+id/tv_country"
+                    android:id="@+id/txtCountryCount"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:gravity="center"
+                    android:textStyle="bold"
                     />
                 <ImageButton
-                    android:id="@+id/btn_country"
+                    android:id="@+id/btnCountrySync"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
@@ -131,13 +135,15 @@
 
                     />
                 <TextView
-                    android:id="@+id/tv_state"
+                    android:id="@+id/txtStateCount"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:gravity="center"
+                    android:textStyle="bold"
                     />
                 <ImageButton
-                    android:id="@+id/btn_state"
+                    android:id="@+id/btnStateSync"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
@@ -167,13 +173,14 @@
 
                     />
                 <TextView
-                    android:id="@+id/tv_district"
+                    android:id="@+id/txtDistrictCount"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:gravity="center"
                     />
                 <ImageButton
-                    android:id="@+id/btn_district"
+                    android:id="@+id/btnDistrictSync"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
@@ -275,14 +282,14 @@
 
                     />
                 <TextView
-                    android:id="@+id/tv_Religion"
+                    android:id="@+id/txtReligionCount"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     />
 
                 <ImageButton
-                    android:id="@+id/btn_Religion"
+                    android:id="@+id/btnSyncReligion"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
@@ -347,13 +354,14 @@
 
                     />
                 <TextView
-                    android:id="@+id/tv_Airport"
+                    android:id="@+id/txtAirportCount"
+                    android:text="Click to view district count"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     />
                 <ImageButton
-                    android:id="@+id/btn_Airport"
+                    android:id="@+id/btnSyncAirport"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"

@@ -24,6 +24,7 @@ import com.rktechapps.erekhanew.models.DashboardRequestBody;
 import com.rktechapps.erekhanew.models.DashboardResponse;
 import com.rktechapps.erekhanew.retrofit.ApiClient;
 import com.rktechapps.erekhanew.retrofit.ApiInterface;
+import com.rktechapps.erekhanew.ui.settings.SettingsActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -73,7 +74,7 @@ public class DashboardActivity extends AppCompatActivity {
                         return true;
 
                     case R.id.nav_settings:
-                        startActivity(new Intent(DashboardActivity.this,SettingsActivity.class));
+                        startActivity(new Intent(DashboardActivity.this, SettingsActivity.class));
                         return true;
 
                 }

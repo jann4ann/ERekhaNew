@@ -66,4 +66,7 @@ dependencies {
     //Room Component
     implementation "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"
+
+    //searchable spinner
+    compile 'com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1'
 }

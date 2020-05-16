@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.particulardetails.ParticularDetailsActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar_layout"/>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/splash"
+                    android:layout_gravity="center">
+                </ImageView>
+
+                <FrameLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:drawablePadding="10dp">
+
+                    <com.rktechapps.erekhanew.commonutils.DelayAutoCompleteTextView
+                        android:id="@+id/atvSearchParticular"
+                        android:background="@drawable/rounded_button_white"
+                        android:textSize="18dp"
+                        android:drawableLeft="@drawable/ic_search_black"
+                        android:maxLines="1"
+                        android:drawablePadding="10dp"
+                        android:hint="Search here.."
+                        android:textColor="@color/colorDarkAsh"
+                        android:inputType="textCapSentences"
+                        android:layout_width="match_parent"
+                        android:padding="5dp"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:imeOptions="flagNoExtractUi|actionSearch"/>
+
+                    <ProgressBar
+                        android:id="@+id/pb_loading_indicator"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_marginRight="10dp"
+                        android:visibility="gone"/>
+                </FrameLayout>
+
+
+
+
+
+                        <TextView
+                            android:layout_marginTop="15dp"
+                            android:id="@+id/txtSearchResult"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/colorBlack"/>
+
+                <TextView
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom"
+                    android:id="@+id/lblRecentSearches"
+                    android:layout_marginTop="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Recent Searches"
+                    android:textStyle="italic"
+                    android:textSize="16dp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/colorDarkAsh"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/particularDetailsRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="5dp"
+                    android:nestedScrollingEnabled="false">
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+    </LinearLayout>
+</LinearLayout>

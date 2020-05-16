@@ -14,10 +14,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.SettingsActivity"
+        <activity android:name=".ui.particulardetails.ParticularDetailsActivity"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".ui.ManageSponsorsActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".ui.settings.SettingsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.ManageSponsorsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.SupportActivity"
             android:theme="@style/AppTheme.NoActionBar" />

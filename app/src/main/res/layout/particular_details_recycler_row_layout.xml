@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/txtNameParticularDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:textStyle="italic"
+        android:drawableLeft="@drawable/ic_search_black"
+        android:drawablePadding="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/colorDarkAsh"/>
+    <View android:id="@+id/separator"
+        android:background="#DEDEDE"
+        android:layout_width = "fill_parent"
+        android:layout_height="1dip"
+        android:layout_centerVertical ="true"
+        android:layout_alignParentTop="true"/>
+
+            </LinearLayout>
